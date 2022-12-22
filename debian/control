@@ -1,0 +1,27 @@
+Source: node-unique-stream
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Sruthi Chandran <srud@disroot.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+ , chai <!nocheck>
+ , dh-sequence-nodejs
+ , mocha <!nocheck>
+ , node-after <!nocheck>
+ , node-json-stable-stringify <!nocheck>
+ , node-through2-filter <!nocheck>
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-unique-stream
+Vcs-Git: https://salsa.debian.org/js-team/node-unique-stream.git
+Homepage: https://github.com/eugeneware/unique-stream
+Rules-Requires-Root: no
+
+Package: node-unique-stream
+Architecture: all
+Depends: ${misc:Depends}
+ , node-json-stable-stringify
+ , node-through2-filter
+ , nodejs
+Description: node.js through stream that emits a unique stream of objects based on criteria
+ Node.js is an event-based server-side JavaScript engine.
